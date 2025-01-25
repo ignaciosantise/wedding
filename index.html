@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nacho y Pali</title>
+      <meta name="description" content="05/04/2025 - Sisu Multiespacio, Ing. Maschwitz" />
+      <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="favicon.png" type="image/png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css">
+      <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+      <script src="calendar.js" defer></script>
+  </head>
+  <body>
+    <script src="./handlers.js" defer ></script>
+    <div class="container">
+      <div class="section intro">
+        <img class="intro-bg" src="./intro.png" />
+        <img class="intro-bg mobile" src="./intro-mobile.png" />
+        <img class="logo" src="./favicon.svg" />
+      </div>
+      <header class="section">
+        <span class="title">PALI</span>
+        <img class="herobg" src="./hero2.jpeg"></img>
+        <span class="title">NACHO</span>
+        <span class="text">NOS CASAMOS</span>
+      </header>
+      <div class="section datetime">
+        <span class="text">FECHA</span>
+        <span class="title">05.04.2025</span>
+        <span class="text">HORA</span>
+        <span class="title light">12.30 HS</span>
+        <a class="button" id="calendar-button">AGENDAR</a>
+      </div>
+      <div class="section location">
+        <img class="locationbg" src="./sisu.png"></img>
+        <div>
+          <span class="text">LOCACIÓN</span>
+          <img class="locationbg" src="./sisu.png"></img>
+          <span class="subtitle">Sisu Multiespacio<br/>Ing. Maschwitz</span>
+          <a class="button" target="_blank" href="https://maps.app.goo.gl/uGmNs3hd8G3PzF286">IR</a>
+        </div>
+      </div>
+      <div class="section dresscode">
+        <span class="text white">DRESSCODE</span>
+        <span class="title white">ELEGANTE</span>
+        <span class="text white dresscode-detail">DE DÍA</span>
+      </div>
+      <div class="section details">
+        <span class="subtitle i">Amigos</span>
+        <span class="subtitle description">El mejor regalo es tenerte con nosotros ese día</span>
+        <div class="details-actions">
+          <div class="actions-container">
+            <a class="button" target="_blank" href="https://confites.com/pareja/nachoypali/regalar">HACER UN REGALO</a>
+          </div>  
+          <div class="actions-container">
+            <div id="rsvp-options" class="rsvp-options hidden">
+              <p class="text">Confirmá tu nombre</p>
+              <input type="text" id="guest-name" class="guest-input" placeholder="Tu nombre completo">
+              <p class="text">¿Venís?</p>
+              <div class="radio-wrapper">
+                <input type="radio" name="rsvp" id="rsvp-yes" />
+                <label class="cbx" for="rsvp-yes"></label>
+                <label class="lbl" for="rsvp-yes">Si</label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" name="rsvp" id="rsvp-no" />
+                <label class="cbx" for="rsvp-no"></label>
+                <label class="lbl" for="rsvp-no">No</label>
+              </div>
+              <p class="text">¿Necesitás transporte ida y vuelta?</p>
+              <div class="radio-wrapper">
+                <input type="radio" name="transport" id="transport-yes" />
+                <label class="cbx" for="transport-yes"></label>
+                <label class="lbl" for="transport-yes">Si</label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" name="transport" id="transport-no" />
+                <label class="cbx" for="transport-no"></label>
+                <label class="lbl" for="transport-no">No</label>
+              </div>
+            </div>
+            <a id="rsvp" class="button">CONFIRMAR ASISTENCIA</a>
+          </div>
+      </div>
+    </div>
+    <div class="section faq dark">
+      <div>
+        <span class="text white">¿Hasta cuándo tengo tiempo para confirmar?</span>
+        <span class="text white">Por favor confirmá tu asistencia antes del 05/03/2025.</span>
+      </div>
+      <div>
+        <span class="text white">¿Puedo llevar a mis hijos?</span>
+        <span class="text white">Si bien nos encantaría compartir el día con todos, decidimos que sea una celebración solo para adultos.</span>
+      </div>
+      <div>
+        <span class="text white">¿Hay estacionamiento?</span>
+        <span class="text white">Si, el lugar cuenta con estacionamiento gratuito.</span>
+      </div>
+    </div>
+    <div class="section faq light">
+      <div>
+        <span class="text">¿A qué hora finaliza el evento?</span>
+        <span class="text">El evento finaliza a las 20:30hs.</span>
+      </div>
+      <div>
+        <span class="text">¿Qué me pongo para la boda?</span>
+        <span class="text">El dress-code es elegante de día. Extra tip: hay pasto y arena, recomendamos evitar zapatos altos o de taco fino. No te olvides tus lentes.</span>
+      </div>
+      <div>
+        <span class="text">¿Hay transporte?</span>
+        <span class="text">Estamos coordinando transporte ida y vuelta en combi desde zona oeste. Este servicio va a tener un costo adicional y va a estar disponible para quienes necesiten. Si te interesa, indicalo en el formulario y nos vamos a poner en contacto para más detalles.</span>
+      </div>
+    </div>
+    <div class="section outro">
+      <img class="outro-bg" src="./outro.png" />
+      <img class="outro-bg mobile" src="./outro-mobile.png" />
+      <span class="text white">TE ESPERAMOS AHÍ</span>
+    </div>
+  </div>
+</body>
+</html>
