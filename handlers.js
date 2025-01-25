@@ -6,12 +6,13 @@
     const names = allNames.slice(0, -1);
     const last = allNames[allNames.length - 1];
     const greetings = document.querySelector(".details .i");
-    greetings.textContent = allNames.length > 1 ? `${names.join(", ")} y ${last}` : last;
+    const splittedNames = allNames.length > 1 ? `${names.join(", ")} y ${last}` : last;
+    greetings.textContent = splittedNames;
     
     // Initialize input with names
     const guestInput = document.getElementById("guest-name");
     if (guestInput) {
-      guestInput.value = allNames.join(", ");
+      guestInput.value = splittedNames;
     }
   }
 
