@@ -63,7 +63,7 @@
         referrer: "no-referrer",
         body,
       };
-      fetch(formUrl, opts).then((response) => {
+      fetch(formUrl, opts).then(() => {
         rsvpButton.textContent = "¡NOS VEMOS!";
         rsvpButton.parentElement.classList.remove("expanded");
         document.getElementById("rsvp-options").classList.add("hidden");

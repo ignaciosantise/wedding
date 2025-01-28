@@ -7,27 +7,8 @@ function createCalendarEvent() {
     location: 'Sisu Multiespacio, Colectora Oeste Ramal Escobar 2125, B1623 Ingeniero Maschwitz, Provincia de Buenos Aires, Argentina'
   };
 
-  // detect if its iOS
-  // const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  
-  // if (isIOS) {
-  //   // format for iOS
-  //   const icsUrl = `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR
-  //   VERSION:2.0
-  //   BEGIN:VEVENT
-  //   DTSTART:${eventDetails.startDate.replace(/[-:]/g, '')}
-  //   DTEND:${eventDetails.endDate.replace(/[-:]/g, '')}
-  //   SUMMARY:${eventDetails.title}
-  //   DESCRIPTION:${eventDetails.description}
-  //   LOCATION:${eventDetails.location}
-  //   END:VEVENT
-  //   END:VCALENDAR`;
-  //   window.open(encodeURI(icsUrl));
-  // } else {
-    // for android and others, use google calendar
-    const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.title)}&dates=${eventDetails.startDate.replace(/[-:]/g, '')}/${eventDetails.endDate.replace(/[-:]/g, '')}&details=${encodeURIComponent(eventDetails.description)}&location=${encodeURIComponent(eventDetails.location)}`;
-    window.open(googleCalUrl);
-  // }
+  const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.title)}&dates=${eventDetails.startDate.replace(/[-:]/g, '')}/${eventDetails.endDate.replace(/[-:]/g, '')}&details=${encodeURIComponent(eventDetails.description)}&location=${encodeURIComponent(eventDetails.location)}`;
+  window.open(googleCalUrl);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
