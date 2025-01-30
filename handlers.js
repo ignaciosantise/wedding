@@ -47,7 +47,7 @@
       rsvpButton.classList.add("disabled");
       rsvpButton.textContent = "...";
 
-      const formId = 'FAIpQLScpfyGhhvhS_bULm7_v3bJWqV5v_PLai93a-Qw28S_AbUr3Aw';
+      const formId = '1FAIpQLScpfyGhhvhS_bULm7_v3bJWqV5v_PLai93a-Qw28S_AbUr3Aw';
       const formUrl = `https://docs.google.com/forms/u/0/d/e/${formId}/formResponse`;
       
       const body = new URLSearchParams();
@@ -67,6 +67,14 @@
         rsvpButton.textContent = "¡NOS VEMOS!";
         rsvpButton.parentElement.classList.remove("expanded");
         document.getElementById("rsvp-options").classList.add("hidden");
+        
+        // scroll to next section
+        setTimeout(() => {
+          const nextSection = document.getElementById("rsvp-options").nextElementSibling;
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 2000);
       }).catch((error) => {
         rsvpButton.classList.remove("disabled");
         rsvpButton.textContent = "¡CONFIRMAR!";
