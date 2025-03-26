@@ -28,17 +28,17 @@
     } else {
       const noChecked = document.getElementById("rsvp-no").checked;
       const yesChecked = document.getElementById("rsvp-yes").checked;
-      const transportYes = document.getElementById("transport-yes").checked;
-      const transportNo = document.getElementById("transport-no").checked;
+      // const transportYes = document.getElementById("transport-yes").checked;
+      // const transportNo = document.getElementById("transport-no").checked;
       const guestInput = document.getElementById("guest-name");
 
       if (!noChecked && !yesChecked) {
         return alert("Por favor seleccioná una opción para confirmar tu asistencia");
       }
 
-      if (!transportYes && !transportNo) {
-        return alert("Por favor indicá si necesitas transporte");
-      }
+      // if (!transportYes && !transportNo) {
+      //   return alert("Por favor indicá si necesitas transporte");
+      // }
 
       if (!guestInput.value.trim()) {
         return alert("Por favor ingresá tu nombre");
@@ -53,7 +53,8 @@
       const body = new URLSearchParams();
       body.append('entry.1780935194', guestInput.value.trim()); // Name
       body.append('entry.1929940713', noChecked ? "No" : "Si"); // yes/no
-      body.append('entry.520211534', transportNo ? "No" : "Si"); // transport yes/no
+      // body.append('entry.520211534', transportNo ? "No" : "Si"); // transport yes/no
+      body.append('entry.520211534', "No"); // transport yes/no
       body.append('fvv', "1");
       body.append('submit', "Submit");
       const opts = {
